@@ -17,7 +17,7 @@ int main(){
         
     }
 
-    printf("Sum is equalm to : %d", sum);
+    printf("Sum : %d", sum);
     
     return 0;
 }
