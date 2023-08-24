@@ -1,21 +1,21 @@
 #include <stdio.h>
+#include <math.h>
 
-int main(){
-    float avg = 0;
-    int array[10]; // Declaration of array
-
-    for (int i = 0; i < 10; i++)
-    {
-        scanf("%d", &array[i]); // Insertion of data in array
-        avg+=array[i];
+double calculate_mean(int arr[], int size) {
+    double sum = 0.0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
     }
-
-    printf("Average %.2f", avg/10);
-    
-    return 0;
+    return sum / size;
 }
 
-
+double calculate_standard_deviation(int arr[], int size, double mean) {
+    double sum_of_squares = 0.0;
+    for (int i = 0; i < size; i++) {
+        sum_of_squares += pow(arr[i] - mean, 2);
+    }
+    return sqrt(sum_of_squares / size);
+}
 
 int main() {
     int size;
